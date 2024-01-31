@@ -18,6 +18,8 @@ public class Category{
     public ArrayList<Product> getProducts() {
         return products;
     }
+
+    
     /**
      * @apiNote метод добавляющий продукт в категорию
      * @param product
@@ -25,7 +27,7 @@ public class Category{
     public void addNewProduct(Product product){
         products.add(product);
     }
-    
+
     @Override
     public String toString() {
         return name + "=" + products;

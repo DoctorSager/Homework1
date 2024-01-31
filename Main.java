@@ -1,11 +1,10 @@
-
 public class Main {
 
     public static void main(String[] args) {
          
-        User firstUser = new User("Вася","123123");
-        User secondUser = new User("Петя","321321");
-        User thirdUser = new User("Света","456123");
+        User firstUser = new Basket("Вася","123123");
+        User secondUser = new Basket("Петя","321321");
+        User thirdUser = new Basket("Света","456123");
        
         Category noFood = new Category("Всякое");
         Product phone = new Product("Телефон", 100,5.0);
@@ -36,9 +35,9 @@ public class Main {
         System.out.println(noFood);
 
       
-        firstUser.getBasket().addProduct(food.getProducts().get(1));
-        secondUser.getBasket().addProduct(noFood.getProducts().get(3));
-        thirdUser.getBasket().addProduct(food.getProducts().get(4));
+        ((Basket) firstUser).addProduct(food.getProducts().get(1));
+        ((Basket) secondUser).addProduct(noFood.getProducts().get(3));
+        ((Basket) thirdUser).addProduct(food.getProducts().get(4));
 
 
         food.getProducts().remove(0);

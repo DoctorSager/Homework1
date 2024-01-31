@@ -1,14 +1,13 @@
 import java.util.ArrayList;
 
-public class Basket  {
+public class Basket extends User  {
 
     private ArrayList<Product> products;
 
-  
-    public Basket() {
+    public Basket(String login, String password) {
+        super(login, password);
         this.products = new ArrayList<>();
     }
-
     public ArrayList<Product> getProducts(){
         return products;
     }
